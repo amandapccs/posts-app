@@ -1,20 +1,18 @@
-import './App.css';
-import { useFetch } from './hooks/useFetch';
+import Modal from 'react-modal';
+import { MainPage } from './pages/main.page';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { EditPage } from './pages/edit.page';
+
+Modal.setAppElement('#root')
 
 function App() {
-  const { data, isFetching } = useFetch('https://api.github.com/users/amandapccs/repos');
   return (
-    <div>
-      <h1>Repos</h1>
-      { isFetching && <p>Loading...</p> }
-      <ul>
-        { data?.map(repository => {
-        return (<li key={repository.full_name}>
-          <strong>{ repository.full_name }</strong>
-        </li>)
-        })};
-      </ul>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={ <MainPage/> } />
+      <Route path="/posts/:id" element={ <EditPage/> } />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
