@@ -31,11 +31,9 @@ export function PostsTable() {
     const onCheckboxChange = (event, id) => {
         if (event.target.checked) {
             setRenderBulkDeleteButton(true);
-            // console.log(selectedPosts);
             return setSelectedPosts([...selectedPosts, id]);
         }
         setRenderBulkDeleteButton(false);
-        // console.log(selectedPosts);
         return setSelectedPosts(selectedPosts.filter(post => post !== id));
 
     }
