@@ -88,7 +88,7 @@ Na página de edição, a pessoa usuária poderá visualizar o histórico de alt
 <!-- GETTING STARTED -->
 ## Iniciando o projeto
 
-Abaixo será listado como iniciar tanto o front-end quanto o back-end da aplicação, você pode encontrar o repositório da API <a href="https://github.com/amandapccs/motrix-challenge-fullstack-app">aqui</a>.
+Abaixo será listado como iniciar tanto o front-end quanto o back-end da aplicação, você pode encontrar o repositório da API <a href="https://github.com/amandapccs/posts-app-api">aqui</a>.
 
 ### Pré-requisitos.
 
