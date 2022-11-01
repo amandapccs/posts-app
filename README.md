@@ -112,18 +112,7 @@ Para executar o repositório da API localmente, é esperado que o <a href="https
    ```
    
 #### Back-end
-1. Clone o repositório
-   ```sh
-   git clone git@github.com:amandapccs/motrix-challenge-fullstack-app.git
-   ```
-2. Instale as dependências
-   ```sh
-   npm install
-   ```
-3. Inicie a aplicação
-   ```sh
-   npm run local
-   ```
+Siga as instruções no <a href="https://github.com/amandapccs/posts-app-api">repositório da API</a>.
 
 
 <!-- USAGE EXAMPLES -->
