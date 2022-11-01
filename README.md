@@ -11,7 +11,6 @@
     Posts! é uma aplicação fullstack CRUD de gerenciamento de publicações.
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
   </p>
 </div>
 
