@@ -5,6 +5,14 @@ import { useQuery } from "react-query";
 const PostsContext = createContext();
 
 export function PostsProvider({ children }) {
+  axios.defaults.headers.post["Content-Type"] = "application/json";
+  axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+  axios.defaults.headers.post["Access-Control-Allow-Methods"] = "GET,PUT,POST,DELETE,PATCH,OPTIONS";
+  axios.defaults.headers.post["Access-Control-Allow-Headers"] = "*, Authorization";
+  axios.defaults.headers.put["Content-Type"] = "application/json";
+  axios.defaults.headers.put["Access-Control-Allow-Origin"] = "*";
+  axios.defaults.headers.put["Access-Control-Allow-Methods"] = "GET,PUT,POST,DELETE, *";
+  axios.defaults.headers.put["Access-Control-Allow-Headers"] = "*, Authorization";
 
   const { data, isFetching, refetch } = useQuery('posts', async () => {
     const response = await axios.get('https://osseghd4r4.execute-api.us-east-1.amazonaws.com/');
