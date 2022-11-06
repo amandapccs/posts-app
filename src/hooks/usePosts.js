@@ -6,25 +6,25 @@ const PostsContext = createContext();
 
 export function PostsProvider({ children }) {
   const { data, isFetching, refetch } = useQuery('posts', async () => {
-    const response = await axios.get('https://osseghd4r4.execute-api.us-east-1.amazonaws.com/');
+    const response = await axios.get('https://2fu9zsth55.execute-api.us-east-1.amazonaws.com');
     return response.data;
   });
 
   async function getPostById(id) {
-    const response = await axios.get(`https://osseghd4r4.execute-api.us-east-1.amazonaws.com/${id}`);
+    const response = await axios.get(`https://2fu9zsth55.execute-api.us-east-1.amazonaws.com/${id}`);
     return response.data;
   }
 
   async function createPost(post) {
-    await axios.post('https://osseghd4r4.execute-api.us-east-1.amazonaws.com/', post);
+    await axios.post('https://2fu9zsth55.execute-api.us-east-1.amazonaws.com/', post);
   }
 
   async function updatePost(id, post) {
-    await axios.put(`https://osseghd4r4.execute-api.us-east-1.amazonaws.com/${id}`, post);
+    await axios.put(`https://2fu9zsth55.execute-api.us-east-1.amazonaws.com/${id}`, post);
   }
 
   async function deletePost(id) {
-    await axios.delete(`https://osseghd4r4.execute-api.us-east-1.amazonaws.com/${id}`);
+    await axios.delete(`https://2fu9zsth55.execute-api.us-east-1.amazonaws.com/${id}`);
   }
 
   return (
