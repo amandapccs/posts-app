@@ -16,6 +16,10 @@ export const Content = styled.div`
     width: 50px;
   }
 
+  p {
+    color: var(--blue)
+  }
+
   button {
     font-size: 1rem;
     color: #FFF;
