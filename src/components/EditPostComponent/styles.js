@@ -19,6 +19,11 @@ export const Container = styled.form`
     padding: 0 1.5rem;
   }
 
+  li:hover {
+    background-color: #e7e9ee;
+    cursor: pointer;
+  }
+
   ul {
     list-style-type: none;
   }
