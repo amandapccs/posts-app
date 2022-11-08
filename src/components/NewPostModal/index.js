@@ -10,18 +10,22 @@ export function NewPostModal({ isOpen, onRequestClose }) {
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [post, setPost] = useState({});
 
   async function handleCreateNewPost(event) {
     event.preventDefault();
-   await createPost({
+   const newPost = await createPost({
       title,
       content,
     })
 
+    if (newPost.message) return setPost(newPost);
+
+    setPost(newPost);
     setTitle('');
     setContent('');
     refetch();
-    onRequestClose()
+    onRequestClose();
   }
 
 
@@ -49,6 +53,8 @@ export function NewPostModal({ isOpen, onRequestClose }) {
           value={content}
           onChange={event => setContent(event.target.value)}
         />
+
+        { post?.message && <p>{post.message}</p> }
 
         <button type="submit">Cadastrar</button>
       </Container>
