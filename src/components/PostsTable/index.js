@@ -21,17 +21,18 @@ export function PostsTable() {
     }
 
     const handleBulkDeleteButton = async () => {
-        selectedPosts.forEach(async (id) => {
+        Promise.all(selectedPosts.map(async (id) => {
             await deletePost(id);
-        });
-        refetch();
+            setSelectedPosts([]);
+            refetch();
+        }));
         setRenderBulkDeleteButton(false);
     }
 
     const onCheckboxChange = (event, id) => {
         if (event.target.checked) {
             setRenderBulkDeleteButton(true);
-            return setSelectedPosts([...selectedPosts, id]);
+            return setSelectedPosts(selectedPosts.includes(id) ? selectedPosts : [...selectedPosts, id]);
         }
         setRenderBulkDeleteButton(false);
         return setSelectedPosts(selectedPosts.filter(post => post !== id));
