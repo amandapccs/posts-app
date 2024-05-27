@@ -34,7 +34,6 @@
     </li>
     <li><a href="#como-usar">Como usar</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#agradecimentos">Agradecimentos</a></li>
   </ol>
 </details>
 
@@ -156,16 +155,6 @@ Se estiver executando a aplicação localmente, abra uma aba do seu navegador e 
 ## Contato
 
 Amanda Soares - amandchen@hotmail.com - <a href="https://www.linkedin.com/in/amandapccs/">LinkedIn</a>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Agradecimentos
-
-* []() À empresa <a href="https://www.motrix.global/">Motrix</a> por apresentar esse desafio e contribuir no meu aprendizado.
-* []() Ao meu amigo <a href="https://github.com/samsantosb">Samuel</a> pelos ensinamentos em back-end e programação orientada a objetos.
-* []() Ao meu marido <a href="https://www.linkedin.com/in/alexandre-mateus/">Mateus</a>, por seus conhecimentos com design e UI/UX para melhorar a experiência da pessoa usuária para navegar a aplicação. 
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
